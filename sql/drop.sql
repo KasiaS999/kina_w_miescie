@@ -8,4 +8,4 @@ DROP TABLE kina.siedzenie CASCADE;
 DROP TABLE kina.rezerwacja CASCADE;
 DROP TABLE kina.klient CASCADE;
 
-DROP SCHEMA kina;
+DROP SCHEMA kina CASCADE;
