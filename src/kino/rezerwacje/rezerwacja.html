@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang ="pl">
+<head>
+  <meta charset="UTF-8" />
+  <link href="rez.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="../../../img/cinema.png">
+  <title>Rezerwacja</title>
+</head>
+<body>
+    <a id="powrot" href="../../../home.html">
+        <p>STRONA GŁÓWNA</p>
+    </a>
+  
+  
+    <div><select id="kino" name="kino"  onchange="zaladuj_filmy()">
+      <option value=0>KINO</option>
+    </select> </div>
+    <br/>
+    <div><select id="film" name="film"  onchange="zaladuj_siedzenie()">
+      <option value=0>SEANS</option>
+    </select></div>
+   <br/>
+    <div><select id="siedzenie" name="siedzenie">
+      <option value=0>SIEDZENIE</option>
+    </select></div>
+    <br/>
+    <div><select id="klient" name="klient">
+      <option value=0>KLIENT</option>
+    </select> </div>
+  <br/>
+  <b><label> Dodaj kienta, jeśli nie ma go na liście:</label></b>
+  <div id = "dodawanie_rekordu">
+  <p><label>Imie:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label><input class="text" type="text" name="imie" id="imie"></p>
+  <p><label>Nazwisko:&nbsp;&nbsp; </label><input class="text" type="text" name="nazwisko" id="nazwisko"></p>
+  <p><label>Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label><input class="text" type="text" name="email" id="email"></p>
+  <p><input id="button" type="button" value="Dodaj klienta" id="submit" onclick="dodaj_klienta(); location.reload(); zaladuj_klienta();"></p>
+  
+</div>
+  <br/>
+    <div>
+    <input id="button" type="button" value="Zapisz rezerwacje" id="submit" onclick="zarezerwuj()">
+    </div>
+    <br/>
+    <div id = 'zarezerwowano'></div>
+    
+    
+  <script src="rezerwacja.js"></script>
+  <script src="film.js"></script>
+
+  <script src="kina.js"></script>
+  <script src="siedzenie.js"></script>
+</body>
+</html>

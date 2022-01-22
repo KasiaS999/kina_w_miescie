@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang ="pl">
+<head>
+  <meta charset="UTF-8" />
+  <link href="../rezerwacje/rez.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="../../../img/cinema.png">
+  <title>Dodaj film</title>
+</head>
+<body>
+    <a id="powrot" href="../../../home.html">
+        <p>STRONA GŁÓWNA</p>
+    </a>
+  
+    <br/>
+    <div id = "dodawanie_rekordu">
+        <p><label>Tytuł:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label><input class="text" type="text" name="tytul" id="tytul"></p>
+        <p><label>Czas trwania (minuty): &nbsp;&nbsp;</label><input class="text" type="text" name="czas" id="czas"></p>
+        <p><label>Film dostępny od: &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input class="text" type="text" name="od" id="od"></p>
+        <p><label>Film dostępny do: &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input class="text" type="text" name="do" id="do"></p>
+        <p><input id="button" type="button" value="Dodaj film" id="submit" onclick="dodaj_film();"></p>
+        
+    </div>
+    <div id="zmiany"></div>
+
+  <script src="dodaj.js"></script>
+</body>
+</html>

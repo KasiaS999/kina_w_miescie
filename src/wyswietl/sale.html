@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang ="pl">
+<head>
+  <meta charset="UTF-8" />
+  <link href="wyswietl.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="../../img/cinema.png">
+  <title>Wyświetl sale</title>
+</head>
+<body>
+  
+    <a id="powrot" href="../../home.html">
+        <p>STRONA GŁÓWNA</p>
+    </a>
+    <div><select id="kino" name="kino" onchange="pokaz_dla_1_kina();">
+        <option value=0>KINO</option>
+    </select> </div>  
+  <div class="container">
+    <table >
+      <thead>
+        <tr>
+          <th>Nazwa sali</th>
+          <th>Ilość miejsc na sali</th>
+          <th>Nazwa kina</th>
+        </tr>
+      </thead>
+      <tbody id="tabela">
+      </tbody>
+    </table>
+  </div>
+  <div class="container">  
+
+  
+  <script src="sale.js"></script>
+</body>
+</html>

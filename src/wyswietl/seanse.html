@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang ="pl">
+<head>
+  <meta charset="UTF-8" />
+  <link href="wyswietl.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="../../img/cinema.png">
+  <title>Wyświetl seans</title>
+</head>
+<body>
+  
+    <a id="powrot" href="../../home.html">
+        <p>STRONA GŁÓWNA</p>
+    </a>
+    <div><select id="film" name="film" onchange="pokaz_filmy();">
+        <option value=0>FILM</option>
+    </select> </div>  
+  <div class="container">
+    <table >
+      <thead>
+        <tr>
+            <th>Film</th>
+            <th>Godzina rozpoczęcia</th>
+            <th>Godzina zakończenia</th>
+            
+        </tr>
+      </thead>
+      <tbody id="tabela">
+      </tbody>
+    </table>
+  </div>
+  <div class="container">  
+
+  
+  <script src="seans.js"></script>
+</body>
+</html>

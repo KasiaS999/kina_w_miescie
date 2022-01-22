@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang ="pl">
+<head>
+  <meta charset="UTF-8" />
+  <link href="wyswietl.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="../../img/cinema.png">
+  <title>Wyświetl sale</title>
+</head>
+<body>
+  
+    <a id="powrot" href="../../home.html">
+        <p>STRONA GŁÓWNA</p>
+    </a>
+    <div><select id="seans" name="seans" onchange="pokaz_dla_seansu();">
+        <option value=0>SEANS</option>
+    </select> </div>  
+  <div class="container">
+    <table >
+      <thead>
+        <tr>
+            <th>Nazwisko</th>
+            <th>Imie</th>
+            <th>E-mail</th>
+        </tr>
+      </thead>
+      <tbody id="tabela">
+      </tbody>
+    </table>
+  </div>
+  <div class="container">  
+
+  
+  <script src="klient.js"></script>
+</body>
+</html>

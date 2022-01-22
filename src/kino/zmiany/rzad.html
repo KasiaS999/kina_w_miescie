@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang ="pl">
+<head>
+  <meta charset="UTF-8" />
+  <link href="../rezerwacje/rez.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="../../../img/cinema.png">
+  <title>Dodaj rząd</title>
+</head>
+<body>
+    <a id="powrot" href="../../../home.html">
+        <p>STRONA GŁÓWNA</p>
+    </a>
+  
+  
+    <div><select id="kino" name="kino" onchange="zaladuj_sale()">
+      <option value=0>KINO</option>
+    </select> </div>
+    <div><select id="sala" name="sala" >
+        <option value=0>SALA</option>
+      </select> </div>
+    <br/>
+    <div id = "dodawanie_rekordu">
+        <p><label>Numer:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label><input class="text" type="text" name="numer" id="numer"></p>
+        <p><label>Ilość siedzeń:&nbsp;&nbsp;&nbsp;</label><input class="text" type="text" name="ilosc" id="ilosc"></p>
+        <p><input id="button" type="button" value="Dodaj rząd" id="submit" onclick="dodaj_rzad();"></p>
+        
+    </div>
+    <div id="zmiany"></div>
+    
+
+  <script src="kino.js"></script>
+  <script src="dodaj.js"></script>
+</body>
+</html>

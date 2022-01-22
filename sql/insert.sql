@@ -16,22 +16,6 @@ INSERT INTO kina.film ( id_film, czas_trwania_minuty, tytul, film_dostepny_od, f
 (6, 154, 'Bazyliszek', '20.01', '15.03' );
 
 
-INSERT INTO kina.seans ( id_seans, id_film, godzina_rozpoczecia, godzina_zakonczenia) VALUES
-(1, 1, '17:30', '19:50'),
-(2, 1, '20:10', '22:30'),
-(3, 2, '10:00', '12:50'),
-(4, 2, '13:00', '14:50'), 
-(5, 2, '15:00', '16:50'),
-(6, 3, '17:30', '19:50'),
-(7, 3, '17:30', '19:50'),
-(8, 4, '10:30', '12:10'),
-(9, 4, '12:30', '14:20'),
-(10, 5, '16:00', '18:00'),
-(11, 5, '18:10', '20:10'),
-(12, 5, '21:00', '23:00'), 
-(13, 6, '10:00', '12:50'),
-(14, 6, '13:00', '15:50'),
-(15, 6, '20:10', '22:40');
 
 INSERT INTO kina.sala (id_sala, nazwa, ilosc_miejsc_na_sali, id_kino) VALUES
 (1,'Pizza', 200, 1),
@@ -49,6 +33,26 @@ INSERT INTO kina.sala (id_sala, nazwa, ilosc_miejsc_na_sali, id_kino) VALUES
 (13,'Grazie', 250, 5),
 (14,'Ciao!', 300, 5),
 (15,'Pizza', 200, 5);
+
+
+INSERT INTO kina.seans ( id_seans, id_film, godzina_rozpoczecia, godzina_zakonczenia, id_sala) VALUES
+(1, 1, '17:30', '19:50', 1),
+(2, 1, '20:10', '22:30', 1),
+(3, 2, '10:00', '12:50', 2),
+(4, 2, '13:00', '14:50', 2), 
+(5, 2, '15:00', '16:50', 2),
+(6, 3, '17:30', '19:50', 3),
+(7, 3, '17:30', '19:50', 3),
+(8, 4, '10:30', '12:10', 4),
+(9, 4, '12:30', '14:20', 4),
+(10, 5, '16:00', '18:00', 4),
+(11, 5, '18:10', '20:10', 5),
+(12, 5, '21:00', '23:00', 5), 
+(13, 6, '10:00', '12:50', 6),
+(14, 6, '13:00', '15:50', 6),
+(15, 6, '20:10', '22:40', 7),
+(16, 3, '22:10', '232:40', 7);
+
 
 INSERT INTO kina.rzad (id_rzad, id_sala, numer, ilosc_siedzen) VALUES
 (1, 1, 1, 50),

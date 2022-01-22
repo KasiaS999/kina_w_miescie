@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang ="pl">
+<head>
+  <meta charset="UTF-8" />
+  <link href="../kino/rezerwacje/rez.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="../../img/cinema.png">
+  <title>Dodaj nowe kino</title>
+</head>
+<body>
+    <a id="powrot" href="../../home.html">
+        <p>STRONA GŁÓWNA</p>
+    </a>
+  
+    <br/>
+    <div id = "dodawanie_rekordu">
+        <p><label>Nazwa:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label><input class="text" type="text" name="nazwa" id="nazwa"></p>
+        <p><label>Lokalizacja: &nbsp;&nbsp;&nbsp;&nbsp;</label><input class="text" type="text" name="lokalizacja" id="lokalizacja"></p>
+        <p><input id="button" type="button" value="Dodaj kino" id="submit" onclick="dodaj_kino();"></p>
+        
+    </div>
+    <div id="zmiany"></div>
+
+  <script src="dodaj.js"></script>
+</body>
+</html>

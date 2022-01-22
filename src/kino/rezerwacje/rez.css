@@ -1,0 +1,86 @@
+.invalid{
+    border: 2px solid rgb(233, 0, 0) !important;
+}
+html
+{
+    scroll-behavior: smooth;
+   
+}
+body
+{   
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: Helvetica, sans-serif;
+    color: rgb(192, 194, 173);
+    margin-left: 35%;
+    margin-right: 35%;
+   
+}
+select
+{
+    display: inline-block;
+    font-size: 1.5rem;
+    display: inline-block;
+   
+    margin-bottom: 1em;
+    width: 350px;
+    height: 40px;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    color: rgb(192, 194, 173);
+    border-radius: 3%;
+    box-shadow: 0 0 0.5em rgb(88, 88, 88) ;
+    
+}
+select option 
+{ 
+    background-color: black;
+    color: rgb(192, 194, 173);
+    text-align: center;
+} 
+
+a{
+    color: rgb(192, 194, 173);
+    text-decoration: none;
+    margin: 5px;
+}
+
+b{
+    font-size: 20px;
+}
+
+#button {
+  background-color: rgba(109, 94, 94, 0.05);
+  border-radius: 8px;
+  border-width: 2px;
+  border-color: rgb(192, 194, 173);
+  color: rgb(192, 194, 173);
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.text{
+    background-color: rgba(109, 94, 94, 0.05);
+    border-radius: 3px;
+    border-width: 1px;
+    border-color: rgb(192, 194, 173);
+    color: rgb(192, 194, 173);
+}

@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang ="pl">
+<head>
+  <meta charset="UTF-8" />
+  <link href="../wyswietl.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="../../../img/cinema.png">
+  <title>Liczba klientów</title>
+</head>
+<body>
+    <a id="powrot" href="../../../home.html">
+        <p>STRONA GŁÓWNA</p>
+    </a>
+    <br/>
+    <div><select id="seans" name="seans" onchange="zmien_na_przycisk();">
+      <option value=0>SEANS</option>
+    </select> </div>  
+    <div id = "wszystkie"> <input id="button" type="button" value="Wszystkie" id="submit" onclick="pokaz_wszystkie()"></div>
+    <br/>
+    <div id = "zajete"><input id="button" type="button" value="Zajęte" id="submit" onclick="pokaz_zajete()"></div>
+    <script src="dodaj.js"></script>
+</body>
+</html>

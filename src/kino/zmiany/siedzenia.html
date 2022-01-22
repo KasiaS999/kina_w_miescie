@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang ="pl">
+<head>
+  <meta charset="UTF-8" />
+  <link href="../rezerwacje/rez.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="../../../img/cinema.png">
+  <title>Dodaj siedzenie</title>
+</head>
+<body>
+    <a id="powrot" href="../../../home.html">
+        <p>STRONA GŁÓWNA</p>
+    </a>
+  
+  
+    <div><select id="kino" name="kino" onchange="zaladuj_sale()">
+      <option value=0>KINO</option>
+    </select> </div>
+    <div><select id="sala" name="sala" onchange="zaladuj_rzad()">
+        <option value=0>SALA</option>
+      </select> </div>
+      <div><select id="rzad" name="rzad" >
+        <option value=0>RZĄD</option>
+      </select> </div>
+      <div><select id="rodzaj" name="rodzaj" >
+        <option value=0>RODZAJ SIEDZENIA</option>
+      </select> </div>
+    <br/>
+    <div id = "dodawanie_rekordu">
+        <p><label>Numer siedzenia:&nbsp; </label><input class="text" type="text" name="numer" id="numer"></p>
+        <p><input id="button" type="button" value="Dodaj siedzenie" id="submit" onclick="dodaj_siedzenie();"></p>
+        
+    </div>
+    <div id="zmiany"></div>
+    
+
+  <script src="kino.js"></script>
+  <script src="dodaj.js"></script>
+</body>
+</html>

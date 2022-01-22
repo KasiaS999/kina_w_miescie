@@ -1,6 +1,7 @@
 CREATE SCHEMA kina;
 
 
+
 CREATE TABLE kina.kino (
                 id_kino INTEGER NOT NULL,
                 nazwa_kina VARCHAR(255) NOT NULL,
@@ -19,21 +20,22 @@ CREATE TABLE kina.film (
 );
 
 
-CREATE TABLE kina.seans (
-                id_seans INTEGER NOT NULL,
-                id_film INTEGER NOT NULL,
-                godzina_rozpoczecia VARCHAR(10) NOT NULL,
-                godzina_zakonczenia VARCHAR(10) NOT NULL,
-                CONSTRAINT seans_id PRIMARY KEY (id_seans, id_film)
-);
-
-
 CREATE TABLE kina.sala (
                 id_sala INTEGER NOT NULL,
                 nazwa VARCHAR(50),
                 ilosc_miejsc_na_sali INTEGER NOT NULL,
                 id_kino INTEGER NOT NULL,
                 CONSTRAINT sala_id PRIMARY KEY (id_sala)
+);
+
+
+CREATE TABLE kina.seans (
+                id_seans INTEGER NOT NULL,
+                id_film INTEGER NOT NULL,
+                godzina_rozpoczecia VARCHAR(10) NOT NULL,
+                godzina_zakonczenia VARCHAR(10) NOT NULL,
+                id_sala INTEGER NOT NULL,
+                CONSTRAINT seans_id PRIMARY KEY (id_seans, id_film)
 );
 
 
@@ -96,16 +98,23 @@ ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
 
-ALTER TABLE kina.rezerwacja ADD CONSTRAINT seans_rezerwacja_fk
-FOREIGN KEY (id_seans)
-REFERENCES kina.seans (id_seans)
+ALTER TABLE kina.rzad ADD CONSTRAINT sala_rzad_fk
+FOREIGN KEY (id_sala)
+REFERENCES kina.sala (id_sala)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
 
-ALTER TABLE kina.rzad ADD CONSTRAINT sala_rzad_fk
+ALTER TABLE kina.seans ADD CONSTRAINT sala_seans_fk
 FOREIGN KEY (id_sala)
 REFERENCES kina.sala (id_sala)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE kina.rezerwacja ADD CONSTRAINT seans_rezerwacja_fk
+FOREIGN KEY (id_seans)
+REFERENCES kina.seans (id_seans)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
@@ -137,5 +146,3 @@ REFERENCES kina.klient (id_klient)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
-
-

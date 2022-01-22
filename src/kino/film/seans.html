@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang ="pl">
+<head>
+  <meta charset="UTF-8" />
+  <link href="../rezerwacje/rez.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="../../../img/cinema.png">
+  <title>Dodaj seans</title>
+</head>
+<body>
+    <a id="powrot" href="../../../home.html">
+        <p>STRONA GŁÓWNA</p>
+    </a>
+  
+  
+    <div><select id="kino" name="kino" onchange="zaladuj_sale()">
+      <option value=0>KINO</option>
+    </select> </div>
+    <div><select id="sala" name="sala" >
+        <option value=0>SALA</option>
+      </select> </div>
+    <div><select id="film" name="film" >
+        <option value=0>FILM</option>
+      </select> </div>
+    <br/>
+    <div id = "dodawanie_rekordu">
+        <p><label>Godzina rozpoczęcia:&nbsp;&nbsp; </label><input class="text" type="text" name="rozpoczecie" id="rozpoczecie"></p>
+        <p><label>Godzina zakończenia:&nbsp;&nbsp;</label><input class="text" type="text" name="zakonczenie" id="zakonczenie"></p>
+        <p><input id="button" type="button" value="Dodaj seans" id="submit" onclick="dodaj_seans();"></p>
+        
+    </div>
+    <div id="zmiany"></div>
+    
+
+  <script src="kino.js"></script>
+  <script src="dodaj.js"></script>
+</body>
+</html>
